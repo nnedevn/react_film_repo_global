@@ -9,7 +9,7 @@ class FilmListings extends Component {
 
   render() {
     const allFilms = this.props.films.films.map((item) => (
-      <FilmRow key={item.id} film={item} handleChildClick={this.handleChildClick}/>
+      <FilmRow key={item.id} film={item} handleChildClick={this.props.handleChildClick}/>
     ));
     return (
       <div className="film-list">

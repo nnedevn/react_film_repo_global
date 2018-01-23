@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   handleChildClick = (childData, event) => {
-    alert(event);
+    console.log(childData);
   }
 
   render() {

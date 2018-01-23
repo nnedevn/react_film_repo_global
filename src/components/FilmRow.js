@@ -1,20 +1,25 @@
 import React from 'react';
 import FilmPoster from './FilmPoster';
 
-const FilmRow = (props) => {
- 
-  const yearReleased = new Date (props.film.release_date).getFullYear();
+
+class FilmRow extends React.Component{
+
+    render(){
+      const yearReleased = new Date (this.props.film.release_date).getFullYear();
   return (
-    <div key={props.film.id} className="film-row">
-      <FilmPoster film={props.film}/>
+    <div key={this.props.film.id} className="film-row" >
+      <FilmPoster film={this.props.film}/>
       <div className="film-summary">
-        <h1>{props.film.title}</h1>
+        <h1>{this.props.film.title}</h1>
         <p>{yearReleased}</p>
       </div>
     </div>
-
   )
+    }
+   
 }
+
+
 export default FilmRow
 
 

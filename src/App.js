@@ -17,12 +17,15 @@ class App extends Component {
 
   }
 
+  handleChildClick = (childData, event) => {
+    alert(event);
+  }
 
   render() {
     return (
       <div className="App">
         <div className="film-library">
-          <FilmListing films={TMDB} />
+          <FilmListing films={TMDB} handleChildClick={this.handleChildClick}/>
           <FilmDetails />
         </div>
       </div>

@@ -3,13 +3,10 @@ import FilmRow from './FilmRow';
 
 
 class FilmListings extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const allFilms = this.props.films.films.map((item) => (
-      <FilmRow key={item.id} film={item} handleChildClick={this.props.handleChildClick}/>
+      <FilmRow key={item.id} film={item} handleChildClick={this.props.handleChildClick} />
     ));
     return (
       <div className="film-list">
